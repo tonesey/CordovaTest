@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="wTracker">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>WeightTracker</title>
+    <link href="css/index.css" rel="stylesheet" />
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <!-- WeightTracker references -->
+    <!-- AngularJS -->
+    <script src="scripts/angularjs/angular.min.js"></script>
+    <script src="scripts/angularjs/angular-resource.min.js"></script>
+    <script src="scripts/angularjs/angular-route.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <!-- AngularUI -->
+    <!-- https://angular-ui.github.io/bootstrap/ -->
+    <!--<script src="scripts/angular-ui/ui-bootstrap.min.js"></script>-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+
+    <!--
+    <script src="scripts/index.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/directives.js"></script>
+    -->
+</head>
+
+<body>
+
+
+    <header id="header">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">page 1</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="navbar-default fa-home"></i>Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div data-ng-view></div>
+    <!--
+        <section id="todoapp" ng-controller="ToDoCtrl">
+        <header id="header">
+            <div id="headerBand"></div>
+            <input id="new-todo" placeholder="What needs to be done?" ng-text-change="addToDo()" ng-model="newToDoText" autofocus>
+        </header>
+        <section id="main">
+            <div id="todo-list">
+                <div class="templateWrapper" ng-repeat="toDoItem in todos">
+                    <div class="templateContainer">
+                        <input class="templateTitle" ng-class="{crossedOut: toDoItem.done}" type="text" ng-text-change="changeToDoText(toDoItem)" ng-model="toDoItem.text" />
+                        <h3 class="templateAddress">{{toDoItem.address}}</h3>
+                        <button class="templateLeft templateToggle" ng-class="{'checked': toDoItem.done, 'unchecked': !toDoItem.done}" ng-mousedown="toggleToDoDone(toDoItem)"></button>
+                        <button class="templateLeft templateRemove" ng-click="removeToDo(toDoItem)"></button>
+                    </div>
+                    <div class="templateBorder"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+        -->
+
+
+</body>
+</html>
