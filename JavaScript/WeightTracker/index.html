@@ -1,20 +1,28 @@
-﻿<!DOCTYPE html>
-<html data-ng-app="wTracker">
+<!DOCTYPE html>
+<html ng-app="wTrackerApp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>WeightTracker</title>
-    <link href="css/index.css" rel="stylesheet" />
+    <!--  <link href="css/index.css" rel="stylesheet" />-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
 
     <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
+    <!--
+        <script src="scripts/cordova.js"></script>
+        <script src="scripts/platformOverrides.js"></script>
+    -->
 
     <!-- WeightTracker references -->
     <!-- AngularJS -->
-    <script src="scripts/angularjs/angular.min.js"></script>
-    <script src="scripts/angularjs/angular-resource.min.js"></script>
-    <script src="scripts/angularjs/angular-route.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-resource.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+
+
 
     <!-- Bootstrap -->
     <script src="scripts/bootstrap.min.js"></script>
@@ -22,12 +30,9 @@
     <!-- AngularUI -->
     <!-- https://angular-ui.github.io/bootstrap/ -->
     <!--<script src="scripts/angular-ui/ui-bootstrap.min.js"></script>-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="scripts/jquery-1.9.1.min.js"></script>
 
     <script src="app.js"></script>
 
-    <link href="Content/bootstrap.min.css" rel="stylesheet">
 
     <!--
     <script src="scripts/index.js"></script>
@@ -39,21 +44,21 @@
 
 <body>
 
-
     <header id="header">
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">page 1</a>
+                    <a class="navbar-brand" href="/">WeightTracker App</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="navbar-default fa-home"></i>Home</a></li>
+                    <li><a href="#/"><i class="navbar-default fa-home"></i>Home</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div data-ng-view></div>
+    <div ng-view></div>
+
     <!--
         <section id="todoapp" ng-controller="ToDoCtrl">
         <header id="header">
