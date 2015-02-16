@@ -114,6 +114,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Content Include="pages\info.html" />
     <Content Include="pages\charts.html" />
     <Content Include="pages\dataEntry.html" />
     <Content Include="scripts\angular-animate.js" />

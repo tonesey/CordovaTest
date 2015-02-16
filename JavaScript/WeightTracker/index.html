@@ -1,38 +1,32 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="wTrackerApp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>WeightTracker</title>
-    <!--  <link href="css/index.css" rel="stylesheet" />-->
+    <title>WeigthTracker</title>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="scripts/jquery-1.9.1.min.js"></script>
-
     <link href="Content/bootstrap.min.css" rel="stylesheet">
 
     <!-- Cordova reference, this is added to your app when it's built. -->
-    <!--
-        <script src="scripts/cordova.js"></script>
-        <script src="scripts/platformOverrides.js"></script>
-    -->
-
+    <!--<script src="scripts/cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>-->
     <!-- WeightTracker references -->
     <!-- AngularJS -->
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angular-resource.min.js"></script>
     <script src="scripts/angular-route.min.js"></script>
 
-
-
     <!-- Bootstrap -->
     <script src="scripts/bootstrap.min.js"></script>
 
     <!-- AngularUI -->
-    <!-- https://angular-ui.github.io/bootstrap/ -->
-    <!--<script src="scripts/angular-ui/ui-bootstrap.min.js"></script>-->
+    <!-- https://angular-ui.github.com/bootstrap/ -->
+    <script src="scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
 
     <script src="app.js"></script>
-
 
     <!--
     <script src="scripts/index.js"></script>
@@ -44,8 +38,13 @@
 
 <body>
 
+
+
     <header id="header">
-        <nav class="navbar navbar-default">
+
+        <!---->
+        <!--
+            <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/">WeightTracker App</a>
@@ -55,6 +54,56 @@
                 </ul>
             </div>
         </nav>
+            -->
+
+
+        <div class="row">
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+
+        <div class="row">
+            <div ng-controller="ButtonsCtrl">
+                <div class="btn-group">
+                    <a href="#/charts">
+                        <label class="btn btn-success" ng-model="radioModel" btn-radio="'opt1'" uncheckable>Charts</label>
+                    </a>
+                    <a href="#/">
+                        <label class="btn btn-success" ng-model="radioModel" btn-radio="'opt2'" uncheckable>Data Entry</label>
+                    </a>
+                    <a href="#/info">
+                        <label class="btn btn-success" ng-model="radioModel" btn-radio="'opt3'" uncheckable>Info</label>
+                    </a>
+                </div>
+            </div>
+
+            <!--<div>
+                <tabset justified="true">
+                    <tab heading="SJ">Short Labeled Justified content</tab>
+                    <tab heading="SJ">Short Labeled Justified content</tab>
+                    <tab heading="Long Justified">Long Labeled Justified content</tab>
+                </tabset>
+            </div>-->
+        </div>
+        </div>
+        <!--<div class="row">
+            <tabset>
+                <tab heading="Static title">Static content</tab>
+                <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+                    {{tab.content}}
+                </tab>
+                <tab select="alertMe()">
+                    <tab-heading>
+                        <i class="glyphicon glyphicon-bell"></i> Alert!
+                    </tab-heading>
+                    I've got an HTML heading, and a select callback. Pretty cool!
+                </tab>
+            </tabset>
+        </div>-->
+
+
+
     </header>
 
     <div ng-view></div>
