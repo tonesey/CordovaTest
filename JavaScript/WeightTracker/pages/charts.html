@@ -1,2 +1,23 @@
 
-charts for {{ curWeigth }}
+<!--<canvas id="line" class="chart chart-line" data="data"
+        labels="labels" legend="true" series="series"
+        click="onClick">
+
+</canvas>-->
+
+<div ng-controller="chartsController">
+
+  
+    <div>
+        <!--Today your weight is: {{ curWeigth }} Kg-->
+        <alert type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+    <!--
+        <input ng-model="highchartsNG.title.text">
+        <button ng-click="addSeries()">Add Series</button>
+        <button ng-click="addPoints()">Add Points to Random Series</button>
+        <button ng-click="removeRandomSeries()">Remove Random Series</button>
+        <button ng-click="swapChartType()">Line/Bar</button>
+    -->
+    <highchart id="chart1" config="highchartsNG"></highchart>
+</div>
