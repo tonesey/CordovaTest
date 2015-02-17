@@ -1,4 +1,6 @@
-﻿//MODULE
+﻿
+
+//MODULE
 var wTrackerApp = angular.module('wTrackerApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
 
 //ROUTES
@@ -17,10 +19,12 @@ wTrackerApp.config(function ($routeProvider) {
     .when('/info', {
         templateUrl: 'pages/info.html',
         controller: 'infoController'
+    })
+    .when('/settings', {
+        templateUrl: 'pages/settings.html',
+        controller: 'settingsController'
     });
 });
-
-
 
 wTrackerApp.controller('chartsController', ['$scope', 'curWeigthService', function ($scope, curWeigthService) {
     $scope.curWeigth = curWeigthService.curWeigth;
@@ -39,15 +43,19 @@ wTrackerApp.controller('infoController', ['$scope', function ($scope) {
 }
 ]);
 
-wTrackerApp.controller('ButtonsCtrl', function ($scope) {
-    $scope.singleModel = 1;
-    $scope.radioModel = 'opt1';
-    $scope.checkModel = {
-        opt1: false,
-        opt2: true,
-        opt3: false
-    };
-});
+wTrackerApp.controller('settingsController', ['$scope', function ($scope) {
+}
+]);
+
+//wTrackerApp.controller('ButtonsCtrl', function ($scope) {
+//    $scope.singleModel = 1;
+//    $scope.radioModel = 'opt1';
+//    $scope.checkModel = {
+//        opt1: false,
+//        opt2: true,
+//        opt3: false
+//    };
+//});
 
 wTrackerApp.controller('TabsCtrl', function ($scope, $window) {
     //$scope.tabs = [
@@ -56,23 +64,22 @@ wTrackerApp.controller('TabsCtrl', function ($scope, $window) {
     //];
 
     $scope.selectTab = function (id) {
+        //$window.alert(id);
+
         switch (id) {
             case 'charts':
-                //$window.alert('charts');
                 window.location.href = "#/charts"
                 break;
             case 'dataEntry':
                 window.location.href = "#/"
-                //$window.alert('dataEntry');
                 break;
             case 'info':
                 window.location.href = "#/info"
-                //$window.alert('info');
+                break;
+            case 'settings':
+                window.location.href = "#/settings"
                 break;
         }
-        //window.location.href
-        //window.navigate
-        
     };
 
     //setTimeout(function () {

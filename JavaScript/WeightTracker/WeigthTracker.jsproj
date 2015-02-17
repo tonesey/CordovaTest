@@ -107,6 +107,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\customStyles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -114,6 +115,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Content Include="pages\settings.html" />
     <Content Include="pages\info.html" />
     <Content Include="pages\charts.html" />
     <Content Include="pages\dataEntry.html" />
