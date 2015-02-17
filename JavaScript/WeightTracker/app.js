@@ -50,16 +50,34 @@ wTrackerApp.controller('ButtonsCtrl', function ($scope) {
 });
 
 wTrackerApp.controller('TabsCtrl', function ($scope, $window) {
-    $scope.tabs = [
-      { title: 'Dynamic Title 1', content: 'Dynamic content 1' },
-      { title: 'Dynamic Title 2', content: 'Dynamic content 2', disabled: true }
-    ];
+    //$scope.tabs = [
+    //  { title: 'Dynamic Title 1', content: 'Dynamic content 1' },
+    //  { title: 'Dynamic Title 2', content: 'Dynamic content 2', disabled: true }
+    //];
 
-    $scope.alertMe = function () {
-        setTimeout(function () {
-            $window.alert('You\'ve selected the alert tab!');
-        });
+    $scope.selectTab = function (id) {
+        switch (id) {
+            case 'charts':
+                //$window.alert('charts');
+                window.location.href = "#/charts"
+                break;
+            case 'dataEntry':
+                window.location.href = "#/"
+                //$window.alert('dataEntry');
+                break;
+            case 'info':
+                window.location.href = "#/info"
+                //$window.alert('info');
+                break;
+        }
+        //window.location.href
+        //window.navigate
+        
     };
+
+    //setTimeout(function () {
+    //    $window.alert('You\'ve selected the alert tab!');
+    //});
 });
 
 //SERVICES

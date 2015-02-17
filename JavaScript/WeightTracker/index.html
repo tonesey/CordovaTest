@@ -56,14 +56,35 @@
         </nav>
             -->
 
-
         <div class="row">
-            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            <div class="col-md-12" ng-controller="TabsCtrl">
+                <tabset>
+                    <!--
+                         <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+                         {{tab.content}}
+                        </tab>
+                    -->
+                    <tab select="selectTab('charts')">
+                        <tab-heading>
+                            <i class="glyphicon glyphicon-signal col-md-4"></i>Charts
+                        </tab-heading>
+                    </tab>
+                    <tab select="selectTab('dataEntry')">
+                        <tab-heading>
+                            <i class="glyphicon glyphicon-pencil col-md-4"></i>Enter data
+                        </tab-heading>
+                    </tab>
+                    <tab select="selectTab('info')">
+                        <tab-heading>
+                            <i class="glyphicon glyphicon-info-sign col-md-4"></i>Info
+                        </tab-heading>
+                    </tab>
+                </tabset>
+            </div>
         </div>
 
-        <div class="row">
+        <!--
+            <div class="row">
             <div ng-controller="ButtonsCtrl">
                 <div class="btn-group">
                     <a href="#/charts">
@@ -77,17 +98,9 @@
                     </a>
                 </div>
             </div>
-
-            <!--<div>
-                <tabset justified="true">
-                    <tab heading="SJ">Short Labeled Justified content</tab>
-                    <tab heading="SJ">Short Labeled Justified content</tab>
-                    <tab heading="Long Justified">Long Labeled Justified content</tab>
-                </tabset>
-            </div>-->
-        </div>
-        </div>
-        <!--<div class="row">
+        </div>-->
+        <!--
+            <div class="row">
             <tabset>
                 <tab heading="Static title">Static content</tab>
                 <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
@@ -100,10 +113,8 @@
                     I've got an HTML heading, and a select callback. Pretty cool!
                 </tab>
             </tabset>
-        </div>-->
-
-
-
+        </div>
+            -->
     </header>
 
     <div ng-view></div>
