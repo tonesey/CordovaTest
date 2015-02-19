@@ -7,10 +7,9 @@
 
 <div ng-controller="chartsController">
 
-  
-    <div>
+    <div ng-hide="DataFound()" class="margin10">
         <!--Today your weight is: {{ curWeigth }} Kg-->
-        <alert type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+        <alert type="{{alert.type}}" close="closeAlert(0)">{{alert.msg}}</alert>
     </div>
     <!--
         <input ng-model="highchartsNG.title.text">
@@ -19,5 +18,12 @@
         <button ng-click="removeRandomSeries()">Remove Random Series</button>
         <button ng-click="swapChartType()">Line/Bar</button>
     -->
-    <highchart id="chart1" config="highchartsNG"></highchart>
+    <highchart id="chart1" config="highchartsNG" ng-show="DataFound()">
+    </highchart>
+
+    <!--
+        <div class="check-element animate-show" ng-show="checked">
+        <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+    </div>
+        -->
 </div>

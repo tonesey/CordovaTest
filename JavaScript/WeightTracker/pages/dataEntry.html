@@ -1,9 +1,24 @@
-<div class="row">
+<header>
+    <script>
+        //$(document).ready(function () {
+        //    $("#dtBox").DateTimePicker();
+        //});
+        //$('#sandbox-container input').datepicker({
+        //});
+    </script>
+</header>
+<div class="row" ng-controller="dataEntryController">
     <div class="col-md-6 col-md-offset-3">
-        <h4>Data entry</h4>
         <div class="form-group">
-            <input type="text" class="form-control" ng-model="curWeigth"/>
+            <p>Weigth: </p>
+            <input type="text" class="form-control" ng-model="curWeigth" />
         </div>
-        <a href="#/charts" class="btn btn-primary">Charts</a>
+        <div>
+            <p>Date: </p>
+            <input type="text" ng-datepicker ng-options="datepickerOptions" ng-model="curDate">
+        </div>
+        <!--<a href="#/charts" class="btn btn-primary">Add</a>-->
+        <div class="btn btn-primary" ng-click="AddWeigth()">Add</div>
     </div>
+
 </div>

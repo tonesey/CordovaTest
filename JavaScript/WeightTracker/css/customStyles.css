@@ -1,13 +1,13 @@
 ﻿body {
 }
 
-.top-buffer {
-    margin-top: 20px;
-}
+.top-buffer { margin-top: 20px;}
 
-.tabHeader {
-   margin-right: 10px;
-}
+.margin5 { margin: 5px;}
+
+.margin10 { margin: 10px 10px 10px 10px;}
+
+.tabHeader { margin-right: 10px;}
 
 .top5 { margin-top:5px; }
 .top7 { margin-top:7px; }
