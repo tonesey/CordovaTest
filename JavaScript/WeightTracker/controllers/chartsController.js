@@ -89,8 +89,8 @@ wTrackerApp.controller('chartsController', ['$scope', 'curWeigthService', functi
         //Configuration for the xAxis (optional). Currently only one x axis can be dynamically controlled.
         //properties currentMin and currentMax provied 2-way binding to the chart's maximimum and minimum
         yAxis: {
-            currentMin: 40,
-            currentMax: 120,
+            currentMin: 0,
+            currentMax: 100,
             title: { text: 'weigth' }
         },
         xAxis: {
